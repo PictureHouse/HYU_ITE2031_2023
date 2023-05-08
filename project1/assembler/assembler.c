@@ -49,6 +49,11 @@ int main(int argc, char *argv[])
 			exit(1);
 		}
 
+		if (isNumber(&label[0])) {
+			printf("error: label must start with a letter\n");
+			exit(1);
+		}
+
 		if (!strcmp(label, "")) {
 			count++;
 			continue;
